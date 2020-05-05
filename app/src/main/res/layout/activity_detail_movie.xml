@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".view.activity.DetailMovie">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/detail_iv_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="210dp"
+            android:foreground="@drawable/drop_shadow_bwh" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/detail_iv_thumb"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/drop_shadow"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/detail_iv_star"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="-230dp"
+        android:src="@drawable/star" />
+
+    <TextView
+        android:id="@+id/detail_tv_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="-230dp"
+        android:gravity="center_vertical"
+        android:text="10.0"
+        android:textColor="@color/text_white" />
+
+    <ImageView
+        android:id="@+id/detail_iv_voted"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="-230dp"
+        android:src="@drawable/voted" />
+
+    <TextView
+        android:id="@+id/detail_tv_vote"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="-230dp"
+        android:gravity="center_vertical"
+        android:text="100.000"
+        android:textColor="@color/text_white" />
+
+    <FrameLayout
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/detail_favorit"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="250dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/detail_iv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/add" />
+
+        <TextView
+            android:id="@+id/detail_tv_tambah"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:gravity="center_vertical"
+            android:text="Favorit"
+            android:textColor="@color/text_white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/detail_iv_thumb"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/detail_tv_judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="35dp"
+            android:text="Judul"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/text_white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/detail_tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="35dp"
+                android:text="@string/simple_text"
+                android:textColor="@color/text_light_blue"
+                android:textSize="16sp" />
+
+        </ScrollView>
+
+    </LinearLayout>
+</RelativeLayout>
